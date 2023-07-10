@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Social Media Clone</title>
+    <style>
+        /* CSS styles for the layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        section {
+            margin: 20px;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 5px;
+            text-align: center;
+        }
+        form {
+            margin: 20px;
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            padding: 10px;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        textarea {
+            width: 200px;  /* Adjust the width as needed */
+            height: 100px; /* Adjust the height as needed */
+            resize: none;
+            
+        }
+        #usernamebox{
+            margin-right: 10px;
+            width: 100px;
+            height: 20px;
+ 
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Social Media Clone</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        <h2>Latest Posts</h2>
+        <div>
+            <ul>
+                {% for post in Posts %}
+                    <li>[{{post.username}}]: {{post.text}}</li>
+                {%endfor%}
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <form action="add/" method="POST">
+            {% csrf_token %}
+            <textarea name="username" id = "usernamebox" placeholder="Username"></textarea>
+            <textarea name="text" placeholder="Type post here"></textarea>
+            <input type="submit" value="Add">
+        </form>
+    </section>
+
+    <footer>
+        <h4>Social Media Clone 2023 by Jake Nauman.</h4>
+    </footer>
+</body>
+</html>

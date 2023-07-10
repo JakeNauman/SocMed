@@ -25,12 +25,13 @@ SECRET_KEY = 'django-insecure-rg@gupp)cq-k6ptp4*w6ly509p^*3oa47)sz%yg28#9gp8bg2o
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['192.168.0.92']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'socmed',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

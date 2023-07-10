@@ -1,0 +1,9 @@
+to run server do
+    python manage.py runserver
+
+to run it publicly
+    python manage.py runserver 0.0.0.0:8000
+    [computer ip]:8000 in the web browser will bring you to the website
+
+may need to activate venv
+
