@@ -4,10 +4,6 @@ I implemented user authentication into a simple text post website to learn the b
 
 To run this project, clone it and in the terminal run 
 
-
-python manage.py runserver
->>>>>>> a11cc98d5354f191c4e6adb9260e66bae7c3477b
-
 >>.  .venv/scripts/activate
 >>python manage.py runserver
 
